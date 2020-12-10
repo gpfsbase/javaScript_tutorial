@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple to do list</title>
+</head>
+
+<body>
+	<input id="task-input" type="text" placeholder="add task...">
+	<button id="add-task">Add Task</button>
+	<ul id="task-list">
+	</ul>
+	<script>
+		const taskInput= document.querySelector('#task-input');
+		const taskList= document.querySelector('#task-list');
+		document.querySelector('#add-task').addEventListener('click', () => {
+			task = document.createElement('li');			
+			task.innerText = taskInput.value;
+			taskList.appendChild(task);
+		});
+	</script>
+</body>
+
+</html>
+
